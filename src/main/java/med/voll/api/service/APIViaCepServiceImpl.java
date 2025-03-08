@@ -1,0 +1,47 @@
+package med.voll.api.service;
+
+import med.voll.api.endereco.EnderecoViaCEP;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Objects;
+
+
+@Service
+public class APIViaCepServiceImpl {
+
+    private final RestTemplate restTemplate;
+
+    private static final Logger logger = LoggerFactory.getLogger(APIViaCepServiceImpl.class);
+
+    @Autowired
+    public APIViaCepServiceImpl(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
+
+    public EnderecoViaCEP buscarEnderecoByApi(String cep){
+        if (Objects.isNull(cep) || cep.isEmpty()){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "O CEP digitado não foi encontrado na API ViaCEP!");
+        }
+
+        String url = "https://viacep.com.br/ws/" + cep + "/json/";
+
+        EnderecoViaCEP endereco = restTemplate.getForObject(url, EnderecoViaCEP.class);
+
+        // Depuração para verificar os dados
+        logger.info("Endereco retornado: {}", endereco);
+
+        // Verifique se o objeto retornado é nulo (cep)
+        if (endereco == null) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Endereço não encontrado para o CEP fornecido.");
+        }
+
+        return endereco;
+    }
+
+}

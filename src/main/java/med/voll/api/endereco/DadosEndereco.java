@@ -3,11 +3,12 @@ package med.voll.api.endereco;
 import jakarta.validation.constraints.NotBlank;
 
 public record DadosEndereco(
-                            @NotBlank Integer cep,
+                            @NotBlank String cep,
                             @NotBlank String logradouro,
                             @NotBlank String bairro,
-                            @NotBlank String cidade,
+                            @NotBlank String localidade,
+                            @NotBlank String estado,
                             @NotBlank String uf,
-                            Integer numero,
+                            String numero,
                             String complemento) {
 }

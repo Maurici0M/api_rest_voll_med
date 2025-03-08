@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import med.voll.api.endereco.EnderecoViaCEP;
 import med.voll.api.medico.DadosCadastroMedico;
 import med.voll.api.medico.Especialidade;
 
@@ -33,12 +34,12 @@ public class Medicos {
     @JoinColumn(name = "endereco_id") // Define a chave estrangeira
     private Endereco endereco;
 
-    public Medicos(DadosCadastroMedico dados) {
+    public Medicos(DadosCadastroMedico dados, Endereco endereco) {
         this.nome = dados.nome();
         this.email = dados.email();
         this.crm = dados.crm();
         this.especialidade = dados.especialidade();
-        this.endereco = new Endereco(dados.endereco());
+        //this.endereco = endereco;
     }
 
 }
