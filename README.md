@@ -16,8 +16,8 @@
 <details>
 <summary>Como faço para acessar as tabelas?</summary>
 <br>
-<p>O projeto utiliza o h2Database para permitir o acesso as tabelas da aplicação. Isso facilita na rodagem da aplicação, visto que, não será necessário instalar o MySQL ou qualquer outro software para começar a utilizar a aplicação, basta fazer o "run" na classe principal e pronto, o projeto estará funcionando! :)</p>
-<p>O h2Database nos concede um servidor local, que é "startado" junto da aplicação. Ao acessá-lo, você conseguira fazer as requisições MySQL diretamente nas tabelas, para isso, basta acessar o link abaixo <b>quando o projeto estiver rodando</b>.</p>
+<p>O projeto utiliza o h2Database para permitir o acesso às tabelas da aplicação. Isso facilita na rodagem da aplicação, visto que, não será necessário instalar o MySQL ou qualquer outro software para começar a utilizar a aplicação, basta fazer o "run" na classe principal e pronto, o projeto estará funcionando! :)</p>
+<p>O h2Database nos concede um servidor local, iniciado junto da aplicação. Ao acessá-lo, você conseguira fazer as requisições MySQL diretamente nas tabelas, para isso, basta acessar o link abaixo <b>quando o projeto estiver rodando</b>.</p>
     http://localhost:8080/h2-console/login.do?jsessionid=29a0991dcaef3008cedcc1c67b539f87
 </details>
 <br>
@@ -30,7 +30,7 @@
 <details>
 <summary>Mapa de verbos:</summary>
 
-![v1-mapa-de-verbos.png](src/main/resources/static/images/v1-mapa-de-verbos.png)
+![v2-mapa-de-verbos.png](src/main/resources/static/images/v2-mapa-de-verbos.png)
 </details>
 <br>
 
@@ -82,6 +82,16 @@
 </details>
 <br>
 
+<details>
+<summary><b>[NOVO]</b> Listando por DDD da cidade:</summary>
+<p>Já temos um array que nos traz todos os médicos cadastrados, um método que nos traz o cadastro específico de um médico através do 'ID' dele, e agora, temos um método que nos concede uma lista de médicos que residem na mesma cidade (com os mesmos ddd's)! Para acessar esse método, use o seguinte comando:</p>
+
+    GET -> http://localhost:8080/medicos/ddd/NUMERO_DDD
+
+<p>Dessa forma, teremos a lista de todos os cadastrados que são da mesma cidade.</p>
+
+</details>
+<br>
 <details>
 <summary>Atualizando dados de um cadastro já realizado:</summary>
 <br>

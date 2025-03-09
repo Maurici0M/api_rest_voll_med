@@ -5,7 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import med.voll.api.endereco.DadosEndereco;
 
-public record DadosCadastroMedico(@NotBlank String nome,
+public record DadosCadastroMedico(@NotBlank Long id,
+                                  @NotBlank String nome,
                                   @NotBlank String email,
                                   @NotBlank String crm,
                                   @NotBlank Especialidade especialidade,
