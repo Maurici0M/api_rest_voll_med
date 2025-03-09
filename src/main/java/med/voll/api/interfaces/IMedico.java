@@ -12,6 +12,8 @@ public interface IMedico {
 
     Medicos listarById(Long id);
 
+    List<Medicos> listarByDdd(String ddd);
+
     Medicos excluir(Long id);
 
 }

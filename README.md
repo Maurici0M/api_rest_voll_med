@@ -1,44 +1,43 @@
 <h1>Desafio - API Rest da aplicação Voll.Med</h1>
 
 <details>
-  <summary><b>Objetivos do projeto:</b></summary>
+  <summary>Objetivos do projeto:</summary>
   <br>
-<p>Desenvolver a primeira API utilizando os verbos HTTP: <b>POST, PUT, GET, DELETE e PATCH</b>;</p>
-<p>Compreender a estrutura de um projeto Java com Spring Boot 3;</p>
-<p>Entender o gerenciamento de dependências em um projeto Spring Boot com Maven, realizar requisições utilizando Postman e Insomnia, e organizar o projeto com pacotes, repositórios, classes DTO/Record, além de aplicar melhorias para garantir uma aplicação completa e funcional.</p>
+  <p>Criar a primeira API utilizando os verbos POST, PUT, GET e DELETE;</p>
+  <p>Entender o funcionamento da estrutura de um projeto Java utilizando o Spring Boot 3</p>
+  <p>Compreender o funcionamento das dependências de um projeto Spring Boot com o Maven</p>
+  <p></p>
 </details>
 <br>
 
 <details>
-  <summary><b>Informações da aplicação:</b></summary>
+  <summary>Informações da aplicação:</summary>
 <br>
 <details>
-<summary><b>Como faço para acessar as tabelas?</b></summary>
+<summary>Como faço para acessar as tabelas?</summary>
 <br>
 <p>O projeto utiliza o h2Database para permitir o acesso as tabelas da aplicação. Isso facilita na rodagem da aplicação, visto que, não será necessário instalar o MySQL ou qualquer outro software para começar a utilizar a aplicação, basta fazer o "run" na classe principal e pronto, o projeto estará funcionando! :)</p>
 <p>O h2Database nos concede um servidor local, que é "startado" junto da aplicação. Ao acessá-lo, você conseguira fazer as requisições MySQL diretamente nas tabelas, para isso, basta acessar o link abaixo <b>quando o projeto estiver rodando</b>.</p>
-  
     http://localhost:8080/h2-console/login.do?jsessionid=29a0991dcaef3008cedcc1c67b539f87
 </details>
 <br>
 
 <details>
-<summary><b>Fazendo requisições:</b></summary>
+<summary>Fazendo requisições:</summary>
 <br>
 <p>Para realizar testes na aplicação, incluindo as funcionalidades de adicionar, editar, listar e excluir dados, <b>recomenda-se o uso de ferramentas como Postman ou Insomnia para enviar as requisições</b>. No entanto, sinta-se à vontade para utilizar qualquer outra ferramenta de sua preferência!</p>
 
 <details>
-<summary><b>Mapa de verbos:</b></summary>
-<br>
-  
+<summary>Mapa de verbos:</summary>
+
 ![v1-mapa-de-verbos.png](src/main/resources/static/images/v1-mapa-de-verbos.png)
 </details>
 <br>
 
 <details>
-<summary><b>Cadastrando um médico:</b></summary>
+<summary>Cadastrando um médico:</summary>
 <br>
-<p>Para cadastrar um médico, leve como base o seguinte exemplo de JSON, <b>lembrando que no campo "especialidade", somente esses valores em letras maiúsculas serão aceitos: "ORTOPEDIA, GINECOLOGIA, ODONTOLOGIA e GERAL"</b>: </p>
+<p>Para cadastrar um médico, leve como base o seguinte exemplo de JSON: </p>
 
     POST -> http://localhost:8080/medicos
 
@@ -61,7 +60,7 @@
 <br>
 
 <details>
-<summary><b>Listando todos os médicos cadastrados:</b></summary>
+<summary>Listando todos os médicos cadastrados:</summary>
 <br>
 <p>Se quisermos <b>listar todos os médicos cadastrados</b> na nossa aplicação, basta utilizarmos o seguinte comando:</p>
     
@@ -72,7 +71,7 @@
 </details>
 <br>
 <details>
-<summary><b>Listando por ID:</b></summary>
+<summary>Listando por ID:</summary>
 <br>
 <p>Podemos ter um array com todos os médicos cadastrados, mas, e se quisermos capturar as informações de um em específico? Sem problemas! Para isso, use o seguinte comando:</p>
 
@@ -84,7 +83,7 @@
 <br>
 
 <details>
-<summary><b>Atualizando dados de um cadastro já realizado:</b></summary>
+<summary>Atualizando dados de um cadastro já realizado:</summary>
 <br>
 <p>É possível realizarmos a atualização de alguns campos dos dados de cadastro da nossa aplicação. Para isso, basta utilizarmos o seguinte comando:</p>
 
@@ -100,7 +99,7 @@
 <br>
 
 <details>
-<summary><b>Excluindo cadastros:</b></summary>
+<summary>Excluindo cadastros:</summary>
 <br>
 <p>Caso queiramos eliminar um cadastro de nossos registros é bem simples, basta utilizar o seguinte comando abaixo, mas, vale lembrar que <b>uma vez excluído, não é possível voltar com o cadastro novamente</b>, a menos que seja recadastrado novamente, mas, o número do ID acabará mudando.</p>
 
@@ -109,26 +108,13 @@
 <br>
 
 <details>
-<summary><b>Testando a API ViaCEP:</b></summary>
-  <br>
+<summary>Testando a API ViaCEP:</summary>
 <p>Caso encontre algum problema no retorno dos dados de endereço, teste o CEP direto no método de testes da API e consulte o retorno, utilizando o seguinte comando:</p>
 
-    GET -> http://localhost:8080/viacep/NUMERO_DO_CEP
-</details>
-<br>
-
-<details>
-  <summary>[Extra] <b>Após verificar que depois de horas e horas, erros e erros, a aplicação funciona:</b></summary>
-  <br>
-
-   <div style="display: flex; gap: 10px;">
-    <img src="https://media.tenor.com/atDvbJ9B6M0AAAAM/react-byuntear.gif" alt="coringa" style="width: 45%;"/>
-    <img src="https://media.tenor.com/YA5eTXsPOGQAAAAM/%E1%83%AF%E1%83%9D%E1%83%99%E1%83%94%E1%83%A0%E1%83%98-joker.gif" alt="coringa" style="width: 45%;"/>
-  </div>
-
-</details>
+    GET -> http://localhost:8080/viacep/01310913
 </details>
 
 </details>
 
+</details>
 

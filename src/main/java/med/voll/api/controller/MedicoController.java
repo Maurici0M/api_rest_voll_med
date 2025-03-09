@@ -47,7 +47,7 @@ public class MedicoController {
         return ResponseEntity.ok(listaFormatada);
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<DadosCadastroMedico> listarById(@PathVariable Long id){
         Medicos verificarCadastro = serviceMedico.listarById(id);
 
@@ -56,7 +56,14 @@ public class MedicoController {
         return ResponseEntity.ok(cadastroFormatado);
     }
 
-    @DeleteMapping("{id}")
+    @GetMapping("/ddd/{ddd}")
+    public ResponseEntity<List<Medicos>> listarByDdd(@PathVariable String ddd) {
+        List<Medicos> listarPorDdd = serviceMedico.listarByDdd(ddd);
+
+        return ResponseEntity.ok(listarPorDdd);
+    }
+
+    @DeleteMapping("/{id}")
     @Transactional
     public ResponseEntity<Medicos> deletarById(@PathVariable Long id) {
         Medicos deletarCadastro = serviceMedico.excluir(id);
@@ -64,7 +71,7 @@ public class MedicoController {
         return ResponseEntity.ok(deletarCadastro);
     }
 
-    @PatchMapping("{id}")
+    @PatchMapping("/{id}")
     @Transactional
     public ResponseEntity<Medicos> editarById(@PathVariable Long id, @RequestBody Medicos medicos){
         Medicos editarCadastro = serviceMedico.editar(id, medicos);

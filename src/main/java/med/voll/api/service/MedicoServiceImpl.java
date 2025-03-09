@@ -60,12 +60,14 @@ public class MedicoServiceImpl implements IMedico {
 
     public DadosCadastroMedico cadastrarFormatado(Medicos medicos) {
         return new DadosCadastroMedico(
+                medicos.getId(), //mostrará o 'id' de cadastro do médico ao listar
                 medicos.getNome(),
                 medicos.getEmail(),
                 medicos.getCrm(),
                 medicos.getEspecialidade(),
 
                 new DadosEndereco(
+                        medicos.getEndereco().getDdd(), //adicionará o ddd da cidade do médico para facilitar na busca por região
                         medicos.getEndereco().getCep(),
                         medicos.getEndereco().getLogradouro(),
                         medicos.getEndereco().getBairro(),
@@ -94,6 +96,20 @@ public class MedicoServiceImpl implements IMedico {
         cadastrarFormatado(listaMedicos);
 
         return listaMedicos;
+    }
+
+    public List<Medicos> listarByDdd(String ddd){
+        List<Medicos> listar = repository.findByEnderecoDdd(ddd);
+
+        if (listar.isEmpty()){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Não temos nenhum médico cadastrado para o DDD informado!");
+        }
+
+        for (Medicos medicos : listar){
+            cadastrarFormatado(medicos);
+        }
+
+        return listar;
     }
 
     @Override

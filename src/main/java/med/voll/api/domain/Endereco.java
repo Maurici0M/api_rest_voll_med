@@ -28,6 +28,8 @@ public class Endereco {
     private String numero;
     private String complemento;
 
+    private String ddd;
+
     // Construtor padrão
     public Endereco() {}
 
@@ -42,6 +44,8 @@ public class Endereco {
 
         this.numero = numero;
         this.complemento = complemento;
+
+        this.ddd = enderecoViaCEP.ddd(); //adiciona o ddd automaticamente da cidade ao cadastro para facilitar a busca de médicos por região
 
     }
 

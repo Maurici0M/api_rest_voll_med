@@ -6,7 +6,8 @@ public record EnderecoViaCEP(String cep,
                              String bairro,
                              String localidade,
                              String estado,
-                             String uf){
+                             String uf,
+                             String ddd) {
     @Override
     public String toString() {
         return "EnderecoViaCEP { " +
@@ -17,6 +18,7 @@ public record EnderecoViaCEP(String cep,
                 "\nlocalidade: " + localidade +
                 "\nestado: " + estado +
                 "\nuf: " + uf +
+                "\nddd: " + ddd +
                 "\n}";
     }
 }
