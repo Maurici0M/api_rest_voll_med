@@ -29,7 +29,8 @@
 
 <details>
 <summary>Mapa de verbos:</summary>
-
+<br>
+  
 ![v1-mapa-de-verbos.png](src/main/resources/static/images/v1-mapa-de-verbos.png)
 </details>
 <br>
@@ -109,6 +110,7 @@
 
 <details>
 <summary>Testando a API ViaCEP:</summary>
+  <br>
 <p>Caso encontre algum problema no retorno dos dados de endereço, teste o CEP direto no método de testes da API e consulte o retorno, utilizando o seguinte comando:</p>
 
     GET -> http://localhost:8080/viacep/NUMERO_DO_CEP
