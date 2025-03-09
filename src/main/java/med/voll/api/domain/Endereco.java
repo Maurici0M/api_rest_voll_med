@@ -31,20 +31,6 @@ public class Endereco {
     // Construtor padrão
     public Endereco() {}
 
-    @Deprecated
-    public Endereco(DadosEndereco endereco) {
-        this.cep = endereco.cep();
-
-        this.logradouro = endereco.logradouro();
-        this.bairro = endereco.bairro();
-        this.localidade = endereco.localidade();
-        this.estado = endereco.estado();
-        this.uf = endereco.uf();
-
-        this.numero = endereco.numero();
-        this.complemento = endereco.complemento();
-    }
-
     public Endereco(EnderecoViaCEP enderecoViaCEP, String numero, String complemento) {
         this.cep = enderecoViaCEP.cep();
 

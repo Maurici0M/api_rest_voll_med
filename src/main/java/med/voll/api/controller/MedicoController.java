@@ -31,8 +31,7 @@ public class MedicoController {
     @Transactional
     public ResponseEntity<Medicos> cadastrar (@RequestBody Medicos dados) {
         Medicos salvar = serviceMedico.cadastrar(dados);
-        // Depuração para verificar os dados
-        System.out.println(salvar);
+
         return ResponseEntity.ok(salvar);
     }
 
@@ -47,13 +46,6 @@ public class MedicoController {
 
         return ResponseEntity.ok(listaFormatada);
     }
-
-    /*@GetMapping("{id}")
-    public ResponseEntity<Medicos> listarById(@PathVariable Long id){
-        Medicos listarById = serviceMedico.listarById(id);
-
-        return ResponseEntity.ok(listarById);
-    }*/
 
     @GetMapping("{id}")
     public ResponseEntity<DadosCadastroMedico> listarById(@PathVariable Long id){
@@ -78,14 +70,6 @@ public class MedicoController {
         Medicos editarCadastro = serviceMedico.editar(id, medicos);
 
         return ResponseEntity.ok(editarCadastro);
-    }
-
-    //TESTE API VIACEP
-    @GetMapping("/teste/{cep}")
-    public void testeApi(@PathVariable String cep){
-        EnderecoViaCEP enderecoViaCEP = serviceViaCep.buscarEnderecoByApi(cep);
-
-        System.out.println(enderecoViaCEP);
     }
 
 }

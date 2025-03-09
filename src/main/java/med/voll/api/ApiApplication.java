@@ -13,13 +13,13 @@ public class ApiApplication {
 		SpringApplication.run(ApiApplication.class, args);
 	}
 
-	//necessário adicionar isso, para que o
+	//necessário adicionar isso, para ser possível obter os dados de retorno da api
 	@Configuration
 	public class AppConfig {
 
 		@Bean
 		public RestTemplate restTemplate() {
-			return new RestTemplate();  // Cria um novo RestTemplate
+			return new RestTemplate();  // Cria um RestTemplate
 		}
 	}
 

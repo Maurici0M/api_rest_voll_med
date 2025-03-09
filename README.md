@@ -1,4 +1,4 @@
-<h1>API Rest da aplicação Voll.Med - Alura</h1>
+<h1>Desafio - API Rest da aplicação Voll.Med</h1>
 
 <details>
   <summary>Objetivos do projeto:</summary>
@@ -26,6 +26,13 @@
 <summary>Fazendo requisições:</summary>
 <br>
 <p>Para realizar testes na aplicação, incluindo as funcionalidades de adicionar, editar, listar e excluir dados, <b>recomenda-se o uso de ferramentas como Postman ou Insomnia para enviar as requisições</b>. No entanto, sinta-se à vontade para utilizar qualquer outra ferramenta de sua preferência!</p>
+
+<details>
+<summary>Mapa de verbos:</summary>
+
+![v1-mapa-de-verbos.png](src/main/resources/static/images/v1-mapa-de-verbos.png)
+</details>
+<br>
 
 <details>
 <summary>Cadastrando um médico:</summary>
@@ -104,7 +111,7 @@
 <summary>Testando a API ViaCEP:</summary>
 <p>Caso encontre algum problema no retorno dos dados de endereço, teste o CEP direto no método de testes da API e consulte o retorno, utilizando o seguinte comando:</p>
 
-    GET -> http://localhost:8080/medicos/teste/01310913
+    GET -> http://localhost:8080/viacep/01310913
 </details>
 
 </details>

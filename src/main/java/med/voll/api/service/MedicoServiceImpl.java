@@ -58,7 +58,6 @@ public class MedicoServiceImpl implements IMedico {
         return repository.save(dados);
     }
 
-    @Deprecated
     public DadosCadastroMedico cadastrarFormatado(Medicos medicos) {
         return new DadosCadastroMedico(
                 medicos.getNome(),

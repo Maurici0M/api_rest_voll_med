@@ -31,17 +31,18 @@ public class APIViaCepServiceImpl {
 
         String url = "https://viacep.com.br/ws/" + cep + "/json/";
 
-        EnderecoViaCEP endereco = restTemplate.getForObject(url, EnderecoViaCEP.class);
+        EnderecoViaCEP consultaApi = restTemplate.getForObject(url, EnderecoViaCEP.class);
 
-        // Depuração para verificar os dados
-        logger.info("Endereco retornado: {}", endereco);
+        // Depuração para verificar os dados retornados
+        //logger.info("Endereço retornado: {}", consultaApi);
 
-        // Verifique se o objeto retornado é nulo (cep)
-        if (endereco == null) {
+        // Verifique se a api retorna erro e emite a mensagem not_found
+
+        if (Objects.isNull(consultaApi)) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Endereço não encontrado para o CEP fornecido.");
         }
 
-        return endereco;
+        return consultaApi;
     }
 
 }

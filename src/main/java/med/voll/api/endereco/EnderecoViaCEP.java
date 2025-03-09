@@ -7,4 +7,16 @@ public record EnderecoViaCEP(String cep,
                              String localidade,
                              String estado,
                              String uf){
+    @Override
+    public String toString() {
+        return "EnderecoViaCEP { " +
+                "\ncep: " + cep +
+                "\nlogradouro: " + logradouro +
+                "\ncomplemento: " + complemento +
+                "\nbairro: " + bairro +
+                "\nlocalidade: " + localidade +
+                "\nestado: " + estado +
+                "\nuf: " + uf +
+                "\n}";
+    }
 }

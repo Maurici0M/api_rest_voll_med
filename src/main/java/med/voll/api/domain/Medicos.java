@@ -12,8 +12,6 @@ import java.math.BigInteger;
 
 @Setter
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 @Entity
 @Table(name = "MEDICOS")
@@ -34,12 +32,7 @@ public class Medicos {
     @JoinColumn(name = "endereco_id") // Define a chave estrangeira
     private Endereco endereco;
 
-    public Medicos(DadosCadastroMedico dados, Endereco endereco) {
-        this.nome = dados.nome();
-        this.email = dados.email();
-        this.crm = dados.crm();
-        this.especialidade = dados.especialidade();
-        //this.endereco = endereco;
+    public Medicos() {
     }
 
 }
