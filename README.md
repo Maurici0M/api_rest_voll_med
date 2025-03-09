@@ -111,7 +111,7 @@
 <summary>Testando a API ViaCEP:</summary>
 <p>Caso encontre algum problema no retorno dos dados de endereço, teste o CEP direto no método de testes da API e consulte o retorno, utilizando o seguinte comando:</p>
 
-    GET -> http://localhost:8080/viacep/01310913
+    GET -> http://localhost:8080/viacep/NUMERO_DO_CEP
 </details>
 
 </details>
