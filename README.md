@@ -38,7 +38,7 @@
 <details>
 <summary>Cadastrando um médico:</summary>
 <br>
-<p>Para cadastrar um médico, leve como base o seguinte exemplo de JSON: </p>
+<p>Para cadastrar um médico, leve como base o seguinte exemplo de JSON, <b>lembrando que no campo "especialidade", somente esses valores em letras maiúsculas serão aceitos: "ORTOPEDIA, GINECOLOGIA, ODONTOLOGIA e GERAL"</b>: </p>
 
     POST -> http://localhost:8080/medicos
 
