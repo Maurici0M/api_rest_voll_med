@@ -111,7 +111,7 @@
 <details>
 <summary>Excluindo cadastros:</summary>
 <br>
-<p>Caso queiramos eliminar um cadastro de nossos registros é bem simples, basta utilizar o seguinte comando abaixo, mas, vale lembrar que <b>uma vez excluído, não é possível voltar com o cadastro novamente</b>, a menos que seja recadastrado novamente, mas, o número do ID acabará mudando.</p>
+<p>Caso queiramos eliminar um cadastro dos nossos registros é bem simples, basta utilizar o seguinte comando abaixo, mas, vale lembrar que <b>uma vez excluído, não é possível voltar com o cadastro novamente</b>, a menos que seja recadastrado novamente, mas, o número do ID acabará mudando.</p>
 
     DELETE -> http://localhost:8080/medicos/NUMERO_ID
 </details>
