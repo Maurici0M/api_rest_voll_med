@@ -16,8 +16,8 @@
 <details>
 <summary>Como faço para acessar as tabelas?</summary>
 <br>
-<p>O projeto utiliza o h2Database para permitir o acesso as tabelas da aplicação. Isso facilita na rodagem da aplicação, visto que, não será necessário instalar o MySQL ou qualquer outro software para começar a utilizar a aplicação, basta fazer o "run" na classe principal e pronto, o projeto estará funcionando! :)</p>
-<p>O h2Database nos concede um servidor local, que é "startado" junto da aplicação. Ao acessá-lo, você conseguira fazer as requisições MySQL diretamente nas tabelas, para isso, basta acessar o link abaixo <b>quando o projeto estiver rodando</b>.</p>
+<p>O projeto utiliza o h2Database para permitir o acesso às tabelas da aplicação. Isso facilita na rodagem da aplicação, visto que, não será necessário instalar o MySQL ou qualquer outro software para começar a utilizar a aplicação, basta fazer o "run" na classe principal e pronto, o projeto estará funcionando! :)</p>
+<p>O h2Database nos concede um servidor local, iniciado junto da aplicação. Ao acessá-lo, você conseguira fazer as requisições MySQL diretamente nas tabelas, para isso, basta acessar o link abaixo <b>quando o projeto estiver rodando</b>.</p>
     http://localhost:8080/h2-console/login.do?jsessionid=29a0991dcaef3008cedcc1c67b539f87
 </details>
 <br>
@@ -30,7 +30,7 @@
 <details>
 <summary>Mapa de verbos:</summary>
 
-![v1-mapa-de-verbos.png](src/main/resources/static/images/v1-mapa-de-verbos.png)
+![v2-mapa-de-verbos.png](src/main/resources/static/images/v2-mapa-de-verbos.png)
 </details>
 <br>
 
@@ -54,7 +54,7 @@
     }
 
 <p>Foi implementado no projeto a <b>API ViaCEP</b>, que faz o preenchimento automático dos dados de endereço, somente através da digitação do CEP. <b>Pode-se acrescentar também, o número e complemento do endereço de forma opcional</b>, para serem adicionados ao cadastro. Saiba mais sobre a API acessando o site:</p>
-    
+
     https://viacep.com.br/
 </details>
 <br>
@@ -63,9 +63,9 @@
 <summary>Listando todos os médicos cadastrados:</summary>
 <br>
 <p>Se quisermos <b>listar todos os médicos cadastrados</b> na nossa aplicação, basta utilizarmos o seguinte comando:</p>
-    
+
     GET -> http://localhost:8080/medicos
-    
+
 <p>Dessa forma, virá uma lista com todos os médicos que cadastramos.</p>
 
 </details>
@@ -82,6 +82,16 @@
 </details>
 <br>
 
+<details>
+<summary><b>[NOVO]</b> Listando por DDD da cidade:</summary>
+<p>Já temos um array que nos traz todos os médicos cadastrados, um método que nos traz o cadastro específico de um médico através do 'ID' dele, e agora, temos um método que nos concede uma lista de médicos que residem na mesma cidade (com os mesmos ddd's)! Para acessar esse método, use o seguinte comando:</p>
+
+    GET -> http://localhost:8080/medicos/ddd/NUMERO_DDD
+
+<p>Dessa forma, teremos a lista de todos os cadastrados que são da mesma cidade.</p>
+
+</details>
+<br>
 <details>
 <summary>Atualizando dados de um cadastro já realizado:</summary>
 <br>
@@ -109,22 +119,10 @@
 
 <details>
 <summary>Testando a API ViaCEP:</summary>
-  <br>
 <p>Caso encontre algum problema no retorno dos dados de endereço, teste o CEP direto no método de testes da API e consulte o retorno, utilizando o seguinte comando:</p>
 
     GET -> http://localhost:8080/viacep/01310913
 </details>
-<br>
-<details>
-   <summary>[Extra] <b>Após verificar que depois de horas e horas, erros e erros, a aplicação funciona:</b></summary>
-   <br>
- 
-  <div style="display: flex; gap: 10px;">
-     <img src="https://media.tenor.com/atDvbJ9B6M0AAAAM/react-byuntear.gif" alt="coringa" style="width: 45%;"/>
-     <img src="https://media.tenor.com/YA5eTXsPOGQAAAAM/%E1%83%AF%E1%83%9D%E1%83%99%E1%83%94%E1%83%A0%E1%83%98-joker.gif" alt="coringa" style="width: 45%;"/>
-   </div>
- 
- </details>
 
 </details>
 
