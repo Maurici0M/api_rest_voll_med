@@ -109,10 +109,22 @@
 
 <details>
 <summary>Testando a API ViaCEP:</summary>
+  <br>
 <p>Caso encontre algum problema no retorno dos dados de endereço, teste o CEP direto no método de testes da API e consulte o retorno, utilizando o seguinte comando:</p>
 
     GET -> http://localhost:8080/viacep/01310913
 </details>
+<br>
+<details>
+   <summary>[Extra] <b>Após verificar que depois de horas e horas, erros e erros, a aplicação funciona:</b></summary>
+   <br>
+ 
+  <div style="display: flex; gap: 10px;">
+     <img src="https://media.tenor.com/atDvbJ9B6M0AAAAM/react-byuntear.gif" alt="coringa" style="width: 45%;"/>
+     <img src="https://media.tenor.com/YA5eTXsPOGQAAAAM/%E1%83%AF%E1%83%9D%E1%83%99%E1%83%94%E1%83%A0%E1%83%98-joker.gif" alt="coringa" style="width: 45%;"/>
+   </div>
+ 
+ </details>
 
 </details>
 
